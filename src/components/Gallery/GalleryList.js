@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GalleryItem from './GalleryItem'
 //import axios from 'axios';
 
 class GalleryList extends Component {
@@ -6,13 +7,11 @@ class GalleryList extends Component {
         return (
             <>
             {console.log('GalleryList galleryItems',this.props.galleryItems)}
-            
+
             <ul>
                 {this.props.galleryItems.map((item) => {
-                    return  <li key={item.id}>
-                                <img src={item.path} alt={item.title}></img>
-                            </li>
-                    
+                    console.log(item);
+                     return <GalleryItem galleryItem={item}/>
                 })}
             </ul>
             </>
