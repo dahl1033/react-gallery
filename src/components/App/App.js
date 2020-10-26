@@ -40,8 +40,8 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <p>Gallery goes here</p>
-        <GalleryList galleryItems = {this.state.galleryItems} />
+         {/* Calling the GalleryList component and passing out galleryItems aray and getGallery function in to be used as props */}
+        <GalleryList galleryItems={this.state.galleryItems} getGallery={this.getGallery} />
         
       </div>
     );

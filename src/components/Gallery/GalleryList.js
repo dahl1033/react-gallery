@@ -9,9 +9,11 @@ class GalleryList extends Component {
             {console.log('GalleryList galleryItems',this.props.galleryItems)}
 
             <ul>
+                {/* iterate over items in gallerItems array */}
                 {this.props.galleryItems.map((item) => {
                     console.log(item);
-                     return <GalleryItem galleryItem={item}/>
+                    // Calling the GalleryItem component and passing out gallerItem aray and getGallery function in to be used as props
+                     return <GalleryItem galleryItem={item} getGallery={this.props.getGallery}/>
                 })}
             </ul>
             </>
